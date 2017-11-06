@@ -6,4 +6,11 @@
     <version>0.0.1-SNAPSHOT</version>
   </parent>
   <artifactId>ServiceModule</artifactId>
+  <dependencies>
+		<dependency>
+			<groupId>com.spring.hibernate</groupId>
+			<artifactId>PersistenceModule</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+  </dependencies>
 </project>

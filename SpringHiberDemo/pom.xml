@@ -46,6 +46,13 @@
 			<version>${spring.version}</version>
 		</dependency>
 		
+		<!-- https://mvnrepository.com/artifact/oracle/ojdbc -->
+		<dependency>
+		    <groupId>oracle</groupId>
+		    <artifactId>ojdbc</artifactId>
+		    <version>1.4</version>
+		</dependency> 
+	
 	 </dependencies>
 	 
   <modules>

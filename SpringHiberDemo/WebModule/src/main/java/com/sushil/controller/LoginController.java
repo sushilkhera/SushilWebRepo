@@ -27,6 +27,7 @@ public class LoginController {
 	
 	@RequestMapping(value="/loginSubmit",method=RequestMethod.POST)
 	public ModelAndView loginAuthentication(Model model, @ModelAttribute("loginBean") LoginBean loginBean){
+		System.out.println("User Name from DB:"+loginService.loginAuthenticate().getuName());
 		System.out.println("loginBean.getUserId()::"+loginBean.getUserId());
 		model.addAttribute("loggedInUser",loginBean.getUserId());
 		return new ModelAndView("home");

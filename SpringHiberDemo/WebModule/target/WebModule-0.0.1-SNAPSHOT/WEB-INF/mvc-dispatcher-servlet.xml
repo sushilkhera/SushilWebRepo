@@ -23,6 +23,20 @@
 			</property>	    	
     	</bean>
     	<bean class="org.springframework.web.servlet.resource.ResourceHttpRequestHandler" />
+    	
+    	<bean id="hibernateSessionFactory" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+    		<property name="datasource" ref="datasource"></property>
+    		 <property name="hibernateProperties">
+		       <map>
+		            <entry key="connection.driver_class" value="${DRIVER}" />
+		            <entry key="connection.username" value="${USERNAME}" />
+		            <entry key="connection.password" value="${PASSWORD}" />
+		            <entry key="transaction.factory_class" value="org.hibernate.transaction.JDBCTransactionFactory" />
+		        </map>
+      		 </property>	
+      </bean>
+		
+		<context:property-placeholder location="classpath:dbConnection.properties" />
         <mvc:resources mapping="/resources/**" location="/resources/" cache-period="31556926" />
         <mvc:annotation-driven />
     
